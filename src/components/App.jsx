@@ -1,16 +1,23 @@
-export const App = () => {
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import NavigationMenu from './NavigationMenu/NavigationMenu';
+import TopMenu from './TopMenu/TopMenu';
+import Orders from './Orders/Orders';
+import Products from './Products/Products';
+
+function App() {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div className="app">
+      <TopMenu />
+      <NavigationMenu />
+      <div className="content">
+        <Routes>
+          <Route path="/orders" element={<Orders />} />
+          <Route path="/products" element={<Products />} />
+        </Routes>
+      </div>
     </div>
   );
-};
+}
+
+export default App;

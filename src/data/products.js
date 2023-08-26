@@ -23,8 +23,8 @@ const products = [
     serialNumber: 1234,
     isNew: 1,
     photo: 'pathToFile.jpg',
-    title: 'Product 1',
-    type: 'Monitors',
+    title: 'Product 2',
+    type: 'Books',
     specification: 'Specification 1',
     guarantee: {
       start: '2017-06-29 12:09:33',

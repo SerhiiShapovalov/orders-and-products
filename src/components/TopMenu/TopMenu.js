@@ -13,7 +13,7 @@ function TopMenu() {
 
     const interval = setInterval(() => {
       setCurrentDateTime(new Date());
-    }, 1000); // Обновлять каждую секунду
+    }, 1000);
 
     return () => {
       socket.disconnect();

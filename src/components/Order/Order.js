@@ -12,14 +12,24 @@ function Order({ order, products }) {
     order.products.includes(product.id)
   );
 
+  const totalAmount = orderProducts.reduce(
+    (total, product) =>
+      total + product.price.find(price => price.isDefault).value,
+    0
+  );
+
   return (
     <div className="order">
       <h2>{order.title}</h2>
+      <p>Date: {new Date(order.date).toLocaleString()}</p>
+      <p>Description: {order.description}</p>
+      <p>Total Amount: {totalAmount} UAH</p>
       <button onClick={toggleDetails}>
         {isExpanded ? 'Hide Details' : 'Show Details'}
       </button>
       {isExpanded && (
         <div className="order-details">
+          <h3>Products:</h3>
           <ul>
             {orderProducts.map(product => (
               <li key={product.id}>

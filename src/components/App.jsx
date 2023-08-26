@@ -12,6 +12,7 @@ function App() {
       <NavigationMenu />
       <div className="content">
         <Routes>
+          <Route path="/" element={<div>Home Page</div>} />
           <Route path="/orders" element={<Orders />} />
           <Route path="/products" element={<Products />} />
         </Routes>

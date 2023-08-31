@@ -123,4 +123,6 @@ GitHub.
 `cd C:\Users\other_folders\orders-and-products\server`
 Эта команда изменит текущую директорию командной строки на указанный путь. После того как войдете в эту директорию, можете использовать команду
 
-`node socketServer.mjs` для запуска сервера.
+```node socketServer.mjs```
+
+для запуска сервера.

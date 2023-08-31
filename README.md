@@ -116,5 +116,5 @@ GitHub.
 
 Сервер реализован на http://localhost:3000.
 Для запуска сервера используем командную строку (cmd.exe).
-Чтобы перейти в папку, где находится файл socketServer.mjs, используем команду cd (Change Directory) в командной строке. Например, в случае, если полный путь к папке socketServer.js следующий: `C:\Users\other_folders\orders-and-products\server`, вот что вы должны ввести: `cd C:\Users\other_folders\orders-and-products\server`
+Чтобы перейти в папку, где находится файл socketServer.mjs, используем команду cd (Change Directory) в командной строке. Например, в случае, если полный путь к папке c файлом `socketServer.mjs` следующий: `C:\Users\other_folders\orders-and-products\server`, вот что вы должны ввести: `cd C:\Users\other_folders\orders-and-products\server`
 Эта команда изменит текущую директорию командной строки на указанный путь. После того как войдете в эту директорию, можете использовать команду `node socketServer.mjs` для запуска сервера.

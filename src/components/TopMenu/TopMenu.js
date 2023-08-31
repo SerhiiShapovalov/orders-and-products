@@ -6,9 +6,19 @@ function TopMenu() {
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
 
   useEffect(() => {
-    const socket = io('http://localhost:3000');
+    const socket = io.connect('http://localhost:3000');
+
+    socket.on('connect', () => {
+      console.log('Connected to server');
+    });
+
     socket.on('active_sessions', sessions => {
+      console.log('Received active sessions:', sessions);
       setActiveSessions(sessions);
+    });
+
+    socket.on('disconnect', () => {
+      console.log('Disconnected from server');
     });
 
     const interval = setInterval(() => {
@@ -16,7 +26,7 @@ function TopMenu() {
     }, 1000);
 
     return () => {
-      socket.disconnect();
+      socket.close();
       clearInterval(interval);
     };
   }, []);

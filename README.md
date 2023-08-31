@@ -1,4 +1,4 @@
-# React homework template
+# React orders-and-products template
 
 Этот проект был создан при помощи
 [Create React App](https://github.com/facebook/create-react-app). Для знакомства

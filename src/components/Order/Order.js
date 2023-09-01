@@ -25,7 +25,7 @@ function Order({ order, products }) {
       <p>Date: {new Date(order.date).toLocaleString()}</p>
       <p>Description: {order.description}</p>
       <p>Total Amount: {totalAmount} UAH</p>
-      <button onClick={toggleDetails}>
+      <button onClick={toggleDetails} className={styles['button']}>
         {isExpanded ? 'Hide Details' : 'Show Details'}
       </button>
       {isExpanded && (

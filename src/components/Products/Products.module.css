@@ -23,11 +23,30 @@
   align-self: center;
 }
 
-.handle-filter {
+/* .handle-filter {
   align-self: center;
-}
+} */
 
 .product {
   display: flex;
   gap: 10px;
+}
+
+.handle-filter {
+  padding: 8px 16px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.handle-filter:hover {
+  background-color: #f5f5f5;
+}
+
+.handle-filter:focus {
+  outline: none;
+  border-color: #3182ce;
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2);
 }

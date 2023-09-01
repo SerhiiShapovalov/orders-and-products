@@ -25,7 +25,12 @@ function Orders() {
       {ordersData.map(order => (
         <div className={styles['orders-page-wrapper']} key={order.id}>
           <Order order={order} products={productsData} />
-          <button onClick={() => handleOrderClick(order)}>Open</button>
+          <button
+            onClick={() => handleOrderClick(order)}
+            className={styles['button']}
+          >
+            Open
+          </button>
         </div>
       ))}
       {showModal && selectedOrder && (

@@ -28,3 +28,22 @@
   display: flex;
   gap: 10px;
 }
+
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #2c5282;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2);
+}

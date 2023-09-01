@@ -1,4 +1,4 @@
-# React homework template
+# React orders-and-products template
 
 Этот проект был создан при помощи
 [Create React App](https://github.com/facebook/create-react-app). Для знакомства
@@ -111,3 +111,20 @@ GitHub.
 3. Если все шаги прошли успешно, собранная продакшн версия файлов проекта
    отправляется в ветку `gh-pages`. В противном случае, в логе выполнения
    скрипта будет указано в чем проблема.
+
+## Открытие сервера
+
+Сервер реализован на http://localhost:3000.
+Для запуска сервера используем командную строку (cmd.exe).
+Чтобы перейти в папку, где находится файл socketServer.mjs, используем команду cd (Change Directory) в командной строке. Например, в случае, если полный путь к папке c файлом `socketServer.mjs` следующий:
+
+`C:\Users\other_folders\orders-and-products\server`, вот что нужно ввести:
+
+`cd C:\Users\other_folders\orders-and-products\server`
+Эта команда изменит текущую директорию командной строки на указанный путь. После того как войдете в эту директорию, используйте команду
+
+```
+node socketServer.mjs
+```
+
+для запуска сервера.

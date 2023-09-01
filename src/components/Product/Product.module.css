@@ -1,7 +1,7 @@
 .product {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 5px;
   gap: 20px;
   width: 80vw;
@@ -13,9 +13,11 @@
   border: solid 1px rgb(138, 146, 146);
   border-radius: 4px;
   padding: 10px;
+  max-width: 100%;
+  max-height: 30px;
 }
 
-.product img {
+.product-monitor {
   max-width: 100%;
-  height: auto;
+  max-height: 20px;
 }

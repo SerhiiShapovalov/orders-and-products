@@ -4,7 +4,11 @@ import styles from './Product.module.css';
 function Product({ product }) {
   return (
     <div className={styles['product']}>
-      <img src={product.photo} alt={product.title} />
+      <img
+        className={styles['product-monitor']}
+        src="monitor.jpg"
+        alt={product.title}
+      />
       <h3>{product.title}</h3>
       <p>Type: {product.type}</p>
       <p>Serial Number: {product.serialNumber}</p>

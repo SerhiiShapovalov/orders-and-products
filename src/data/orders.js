@@ -4,7 +4,7 @@ const orders = [
     title: 'Order 1',
     date: '2017-06-29 12:09:33',
     description: 'desc',
-    products: [1], // IDs of products associated with this order
+    products: [1],
   },
   {
     id: 2,

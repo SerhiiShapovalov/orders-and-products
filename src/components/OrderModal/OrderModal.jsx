@@ -17,8 +17,8 @@ function OrderModal({ order, onClose }) {
         <p>Number of Products: {order.products.length}</p>
         <p>Date (Formatted 1): {new Date(order.date).toLocaleString()}</p>
         <p>Date (Formatted 2): {order.date}</p>
-        {/* Рассчитайте сумму прихода и отобразите ее здесь */}
-        {/* Реализуйте конвертацию валюты и отобразите сумму в разных валютах */}
+        {/* Рассчитываем сумму прихода и отображаем ее здесь */}
+        {/* Реализуем конвертацию валюты и отображаем сумму в разных валютах */}
       </div>
     </div>
   );

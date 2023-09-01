@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import io from 'socket.io-client';
+import styles from './TopMenu.module.css';
 
 function TopMenu() {
   const [activeSessions, setActiveSessions] = useState(0);
@@ -32,9 +33,15 @@ function TopMenu() {
   }, []);
 
   return (
-    <div className="top-menu">
-      <div className="date-time">{currentDateTime.toLocaleString()}</div>
-      <div className="active-sessions">Active Sessions: {activeSessions}</div>
+    <div className={styles['top-menu']}>
+      <div>
+        <div className={styles['date-time']}>
+          {currentDateTime.toLocaleString()}
+        </div>
+        <div className={styles['active-sessions']}>
+          Active Sessions: {activeSessions}
+        </div>
+      </div>
     </div>
   );
 }

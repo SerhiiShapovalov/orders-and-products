@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Product from '../Product/Product';
 import productsData from '../../data/products';
+import styles from './Products.module.css';
 
 function Products() {
   const [selectedType, setSelectedType] = useState('All');
@@ -19,16 +20,22 @@ function Products() {
       : productsData.filter(product => product.type === selectedType);
 
   return (
-    <div className="products-page">
-      <h1>Products</h1>
-      <select onChange={handleTypeChange}>
-        <option value="All">All</option>
-        <option value="Monitors">Monitors</option>
-        <option value="Books">Books</option>
-        <option value="Other">Other</option>
-      </select>
+    <div className={styles['products-page']}>
+      <div className={styles['products-wrapper']}>
+        <h1 className={styles['products-title']}>Products</h1>
+        <select className={styles['handle-filter']} onChange={handleTypeChange}>
+          <option value="All">All</option>
+          <option value="Monitors">Monitors</option>
+          <option value="Books">Books</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
       {filteredProducts.map(product => (
-        <Product key={product.id} product={product} />
+        <Product
+          className={styles['product']}
+          key={product.id}
+          product={product}
+        />
       ))}
     </div>
   );

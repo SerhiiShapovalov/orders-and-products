@@ -1,8 +1,10 @@
 import React from 'react';
+import styles from './Product.module.css';
 
 function Product({ product }) {
   return (
-    <div className="product">
+    <div className={styles['product']}>
+      <img src={product.photo} alt={product.title} />
       <h3>{product.title}</h3>
       <p>Type: {product.type}</p>
       <p>Serial Number: {product.serialNumber}</p>
@@ -17,7 +19,6 @@ function Product({ product }) {
           Price ({price.symbol}): {price.value}
         </p>
       ))}
-      <img src={product.photo} alt={product.title} />
     </div>
   );
 }

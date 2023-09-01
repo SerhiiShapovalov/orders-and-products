@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Product from '../Product/Product';
+import styles from './Order.module.css';
 
 function Order({ order, products }) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -19,8 +20,8 @@ function Order({ order, products }) {
   );
 
   return (
-    <div className="order">
-      <h2>{order.title}</h2>
+    <div className={styles['order']}>
+      <h2 className={styles['order-title']}>{order.title}</h2>
       <p>Date: {new Date(order.date).toLocaleString()}</p>
       <p>Description: {order.description}</p>
       <p>Total Amount: {totalAmount} UAH</p>

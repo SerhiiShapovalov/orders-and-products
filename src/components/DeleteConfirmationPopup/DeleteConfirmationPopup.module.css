@@ -79,10 +79,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
   background-color: rgba(100, 200, 100);
-  width: 40px;
-  padding: 5px;
+  width: 55px;
+  height: 36px;
+  border-radius: 18px;
+  padding: 10px 20px;
   cursor: pointer;
   transition: color 0.3s ease, background-color 0.3s ease;
 }
@@ -98,10 +99,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px;
-  border-radius: 50%;
-  background-color: rgba(100, 200, 100, 0.9);
-  width: 40px;
+  background-color: rgba(100, 200, 100);
+  width: 55px;
+  height: 36px;
+  border-radius: 18px;
+  padding: 10px 20px;
   cursor: pointer;
   transition: color 0.3s ease, background-color 0.3s ease;
 }

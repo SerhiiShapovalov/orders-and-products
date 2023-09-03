@@ -44,3 +44,9 @@
   outline: none;
   color: #cc0000;
 }
+
+.currency {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}

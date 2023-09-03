@@ -47,8 +47,10 @@ function Order({ order, products, onDeleteClick }) {
       <p>Number of Products: {order.products.length} Products</p>
       <p>Description: {order.description}</p>
       <p>
-        Total Amount: {calculateTotalAmount(order)} UAH (USD:{' '}
-        {calculateTotalAmountInUSD(order)} USD)
+        {calculateTotalAmountInUSD(order)}
+        <span className={styles.currency}>USD</span>
+        {calculateTotalAmount(order)}
+        <span className={styles.currency}>UAH</span>
       </p>
       <button onClick={toggleDetails} className={`${styles['button']}`}>
         {isExpanded ? 'Hide Details' : 'Show Details'}

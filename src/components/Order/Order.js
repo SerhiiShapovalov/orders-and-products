@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Product from '../Product/Product';
 import styles from './Order.module.css';
+import { BsTrash3Fill } from 'react-icons/bs';
 
 function Order({ order, products, onDeleteClick }) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -49,7 +50,7 @@ function Order({ order, products, onDeleteClick }) {
         Total Amount: {calculateTotalAmount(order)} UAH (USD:{' '}
         {calculateTotalAmountInUSD(order)} USD)
       </p>
-      <button onClick={toggleDetails} className={styles['button']}>
+      <button onClick={toggleDetails} className={`${styles['button']}`}>
         {isExpanded ? 'Hide Details' : 'Show Details'}
       </button>
       {isExpanded && (
@@ -64,8 +65,11 @@ function Order({ order, products, onDeleteClick }) {
           </ul>
         </div>
       )}
-      <button onClick={() => onDeleteClick(order)} className={styles['button']}>
-        Delete
+      <button
+        onClick={() => onDeleteClick(order)}
+        className={`${styles['custom-button']}`}
+      >
+        <BsTrash3Fill />
       </button>
     </div>
   );

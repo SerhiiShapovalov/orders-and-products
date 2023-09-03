@@ -44,7 +44,7 @@ function Order({ order, products, onDeleteClick }) {
     <div className={styles['order']}>
       <h2 className={styles['order-title']}>{order.title}</h2>
       <p>Date: {new Date(order.date).toLocaleString()}</p>
-      <p>Number of Products: {order.products.length} Products</p>
+      <p>{order.products.length} Products</p>
       <p>Description: {order.description}</p>
       <p>
         {calculateTotalAmountInUSD(order)}

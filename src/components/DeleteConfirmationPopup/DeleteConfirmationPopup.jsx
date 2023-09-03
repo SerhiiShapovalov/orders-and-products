@@ -14,21 +14,23 @@ function DeleteConfirmationPopup({ order, onDelete, onClose }) {
         isOpen ? styles.open : ''
       }`}
     >
-      <div className={styles['popup-content']}>
-        <span className={styles.close} onClick={closePopup}>
-          &times;
-        </span>
-        <h2>Delete Order</h2>
-        <p>Are you sure you want to delete the order "{order.title}"?</p>
-        <div className={styles['button-container']}>
+      <div className={styles['popup-wrapper']}>
+        <div className={styles['popup-content']}>
+          <span className={styles.close} onClick={closePopup}>
+            &times;
+          </span>
+          <h2>Delete Order</h2>
+          <p>Are you sure you want to delete the order "{order.title}"?</p>
+        </div>
+        <div className={styles['button-wrapper']}>
+          <button onClick={onClose} className={styles['cancel-button']}>
+            No
+          </button>
           <button
             onClick={() => onDelete(order)}
             className={styles['delete-button']}
           >
             Yes
-          </button>
-          <button onClick={onClose} className={styles['cancel-button']}>
-            No
           </button>
         </div>
       </div>

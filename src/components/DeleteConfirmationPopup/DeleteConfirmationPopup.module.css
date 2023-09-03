@@ -6,44 +6,59 @@
   text-align: left;
   width: 100vw;
   height: 100vh;
+  bottom: 0;
+  left: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000;
-  /* overflow: auto; */
-  transition: transform 0.3s ease-in-out;
-  transform: translate(100%);
+  overflow: auto;
+  visibility: visible;
+  transform: translate(-50%) scale(1);
+  transition: transform 0.3s ease;
 }
 
 .delete-confirmation-popup.open {
   transform: translateX(0);
 }
 
-.popup-content {
-  background-color: white;
-  border-radius: 3px;
+.popup-wrapper {
+  z-index: 1000000000;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   max-width: 400px;
   position: relative;
 }
 
-.button-container {
-  background-color: rgba(100, 200, 100, 0.9);
+.popup-content {
+  height: 60px;
   padding: 10px;
-  display: flex;
-  justify-content: flex-end;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #fff;
 }
 
-.close {
+.button-wrapper {
+  height: 50px;
+  padding: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  background-color: rgba(100, 200, 100);
+}
+
+.popup-wrapper .close {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: -15px;
+  right: -15px;
   padding: 0;
   border-radius: 50%;
   background-color: rgb(215, 223, 224);
   box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.3);
   cursor: pointer;
-  font-size: 20px;
-  width: 24px;
-  height: 24px;
+  font-size: 24px;
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,23 +67,46 @@
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.close:hover,
-.close:focus {
+.popup-wrapper .close:hover,
+.popup-wrapper .close:focus {
   background-color: rgba(109, 127, 129, 0.7);
   box-shadow: none;
 }
 
 .delete-button {
-  background-color: #ff5555;
-  color: white;
   border: none;
-  border-radius: 3px;
-  padding: 8px 16px;
-  margin-left: 10px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(100, 200, 100);
+  width: 40px;
+  padding: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .delete-button:hover {
-  background-color: #cc0000;
+  color: #cc0000;
+  background-color: #fff;
+}
+
+.cancel-button {
+  border: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: rgba(100, 200, 100, 0.9);
+  width: 40px;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.cancel-button:hover {
+  color: #000;
+  background-color: #fff;
 }

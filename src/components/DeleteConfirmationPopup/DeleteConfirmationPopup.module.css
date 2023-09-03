@@ -13,7 +13,7 @@
   overflow: auto;
   visibility: visible;
   transform: translate(-50%) scale(1);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease-in-out;
 }
 
 .delete-confirmation-popup.open {
@@ -64,7 +64,7 @@
   justify-content: center;
   font-family: Arial, sans-serif;
   line-height: 1;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .popup-wrapper .close:hover,
@@ -79,13 +79,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 5px;
   background-color: rgba(100, 200, 100);
-  width: 55px;
+  width: 85px;
   height: 36px;
   border-radius: 18px;
   padding: 10px 20px;
   cursor: pointer;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .delete-button:hover {
@@ -100,12 +101,12 @@
   align-items: center;
   justify-content: center;
   background-color: rgba(100, 200, 100);
-  width: 55px;
+  width: 85px;
   height: 36px;
   border-radius: 18px;
   padding: 10px 20px;
   cursor: pointer;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .cancel-button:hover {

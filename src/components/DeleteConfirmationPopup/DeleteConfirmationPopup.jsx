@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BsTrash3Fill } from 'react-icons/bs';
 import styles from './DeleteConfirmationPopup.module.css';
 
 function DeleteConfirmationPopup({ order, onDelete, onClose }) {
@@ -30,6 +31,7 @@ function DeleteConfirmationPopup({ order, onDelete, onClose }) {
             onClick={() => onDelete(order)}
             className={styles['delete-button']}
           >
+            <BsTrash3Fill />
             Yes
           </button>
         </div>

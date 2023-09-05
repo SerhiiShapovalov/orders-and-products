@@ -10,7 +10,9 @@ function Product({ product }) {
         alt={product.title}
       />
       <h3>{product.title}</h3>
-      <p>Type: {product.type}</p>
+      <div className={styles['type-wrapper']}>
+        <p>Type: {product.type}</p>
+      </div>
       <p>Serial Number: {product.serialNumber}</p>
       <p>Is New: {product.isNew === 1 ? 'Yes' : 'No'}</p>
       <p>Specification: {product.specification}</p>

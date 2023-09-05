@@ -5,7 +5,8 @@
   align-items: flex-start;
   text-align: center;
   margin-top: 60px;
-  margin-left: 150px;
+  margin-left: 130px;
+  padding: 20px;
   gap: 10px;
 }
 
